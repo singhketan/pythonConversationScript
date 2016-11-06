@@ -1,0 +1,16 @@
+{
+   "your_messages":[
+      "Hi",
+      "What's your name?",
+      "Bye",
+	  "What are you talking about?",
+	  "Are you okay?"
+   ],
+   "his_responses":[
+      "Hello",
+      "Same as you. I am you!",
+      "Goodbye",
+	  "I know it's confusing, but you have to trust me. I AM you.",
+	  "No! I'm in danger and I need help!"
+   ]
+}
