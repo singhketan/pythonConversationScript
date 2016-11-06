@@ -12,5 +12,7 @@
       "Goodbye",
 	  "I know it's confusing, but you have to trust me. I AM you.",
 	  "No! I'm in danger and I need help!"
-   ]
+   ],
+   "error_response": "I don't know what you are talking about.",
+   "welcome_response" : "Online"
 }

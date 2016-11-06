@@ -8,7 +8,9 @@ with open('responses.json') as data_file:
 	
 #Load the questions and responses
 your_messages = responses['your_messages']
+your_messages_lower = [x.lower() for x in your_messages]
 his_responses = responses['his_responses']
+
 
 def show_typing(your_message):
 	#Shows 'Typing' message and the executes the recursion.
@@ -20,14 +22,14 @@ def communicate(your_message):
 	#Here we're trying get the prompt, aka response to the user's message.
 	if your_message is not "":
 		#The message that the user enters will be searched in 'your messages' property in the JSON derived dict.
-		if your_message in your_messages:
+		if your_message in your_messages_lower:
 			#We'll find the id of the message entered and will use it to retrieve the corresponding response
-			location_index = your_messages.index(your_message)
+			location_index = your_messages_lower.index(your_message)
 			prompt = his_responses[location_index]
 		else:		
-			prompt = "I don't know what you're talking about."
+			prompt = responses['error_response']
 	else:
-		prompt = "Online."
+		prompt = responses['welcome_response']
 		
 	#Once we have the prompt, we'll show it, and use it to draw in another user message.
 	your_message = raw_input("Reply : " + prompt + "\n-----------------\nYou : ")
